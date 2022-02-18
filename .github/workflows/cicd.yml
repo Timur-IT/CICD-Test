@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Staging
-      url: 'http://test.myapp.com'
+      url: ${{ steps.step_id.outputs.url_output }}
     steps:
       - name: Deploy
         run: echo Deploy to Staging
